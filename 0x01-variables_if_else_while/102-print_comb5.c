@@ -21,7 +21,7 @@ int main(void)
 				{
 					ij = (i * 10) + j;
 					kl = (k * 10) + l;
-					if (i <= k && ij < kl)
+					if (ij < kl)
 					{
 					putchar('0' + i);
 					putchar('0' + j);
