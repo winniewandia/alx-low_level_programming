@@ -19,17 +19,17 @@ int main(void)
 			{
 				for (l = 1; l < 10; l++)
 				{
-					if (j < l && i <= k)
+					if (i <= k)
 					{
-						putchar('0' + i);
-						putchar('0' + j);
-						putchar(' ');
-						putchar('0' + k);
-						putchar('0' + l);
-						if (i == 9 && j == 8)
-							break;
-						putchar(',');
-						putchar(' ');
+					putchar('0' + i);
+					putchar('0' + j);
+					putchar(' ');
+					putchar('0' + k);
+					putchar('0' + l);
+					if (i == 9 && j == 8)
+					break;
+					putchar(',');
+					putchar(' ');
 					}
 				}
 			}
