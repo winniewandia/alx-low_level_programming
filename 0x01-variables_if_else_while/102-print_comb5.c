@@ -19,8 +19,8 @@ int main(void)
 			{
 				for (l = 1; l < 10; l++)
 				{
-					ij = (i * 10) + j;
-					kl = (k * 10) + l;
+					ij = i + j;
+					kl = k + l;
 					if (ij < kl)
 					{
 					putchar('0' + i);
