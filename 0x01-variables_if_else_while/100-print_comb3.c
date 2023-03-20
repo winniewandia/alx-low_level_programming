@@ -9,31 +9,21 @@
 
 int main(void)
 {
-	short int com;
-	int first;
-	int last;
+	int i, j;
 
-	com = 01;
-	first = 0;
-	last = 0;
-	while (com < 100)
+	for (i = 0; i < 10; i++)
 	{
-		if (com / 10 > 10)
+		for (j = 1; j < 10; j++)
 		{
-			putchar('0' + first);
-		}
-		last = com % 10;
-		if (first != last)
-		{
-			if (first < last)
+			if (i < j && i != j)
 			{
-				putchar('0' + com);
+				putchar('0' + i);
+				putchar('0' + j);
 				putchar(',');
 				putchar(' ');
 			}
 		}
-		com++;
 	}
-	putchar ('\n');
+	putchar('\n');
 	return (0);
 }
