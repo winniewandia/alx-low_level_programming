@@ -13,7 +13,7 @@ int main(void)
 {
 	unsigned long int i;
 
-	char ch[9] = "_putchar\0";
+	char ch[9] = "_putchar";
 
 	i = 0;
 	while (i < strlen(ch))
