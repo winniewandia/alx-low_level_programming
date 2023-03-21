@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <string.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -10,11 +11,11 @@
 
 int main(void)
 {
-	int i;
+	unsigned long int i;
 
-	char ch[9] = "_putchar";
+	char ch[9] = "_putchar\0";
+
 	i = 0;
-	#include "main.h"
 	while (i < strlen(ch))
 	{
 		_putchar(ch[i]);
