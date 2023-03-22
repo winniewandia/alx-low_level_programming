@@ -8,12 +8,14 @@ void fibonacci_numbers(void)
 {
 	int a, b, c, sum;
 
-	for (c = 0; c < 50; c++)
+	 a = 0;
+	 b = 1;
+	for (c = 1; c < 50; c++)
 	{
-		a = 0;
-		b = 1;
 		sum = a + b;
 		printf("%d", sum);
+		if (c == 49)
+			break;
 		putchar(',');
 		putchar(' ');
 		a = b;
