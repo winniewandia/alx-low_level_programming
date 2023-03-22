@@ -15,7 +15,7 @@ void jack_bauer(void)
 	while (a < 3)
 	{
 		b = 0;
-		while (b < 9)
+		while (b < 10)
 		{
 			c = 0;
 			while (c < 6)
