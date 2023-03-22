@@ -3,9 +3,9 @@
 /**
  * add -  Adds 2 integers
  * @n: integer to be added
- * @m: other integer
+ * @m: other integer to be added
  *
- * return: sum of 2 integers
+ * Return: sum of 2 integers
  */
 
 int add(int n, int m)
