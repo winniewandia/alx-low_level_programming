@@ -20,3 +20,4 @@ void print_times_table(int n);
 void print_long(long var);
 void natural_numbers(void);
 void fibonacci_numbers(void);
+void even_fibonacci(void);
