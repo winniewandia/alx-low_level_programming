@@ -21,4 +21,15 @@ void natural_numbers(void)
 	printf("%d", sum);
 	putchar('\n');
 }
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	natural_numbers();
+	return (0);
+}
 
