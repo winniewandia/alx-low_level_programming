@@ -10,7 +10,7 @@ void print_long(long var)
 {
 	if (var / 10)
 		print_long(var / 10);
-	putchar((var % 10) + '0');
+	_putchar((var % 10) + '0');
 }
 /**
  * print_times_table - prints n times table starting with zero
