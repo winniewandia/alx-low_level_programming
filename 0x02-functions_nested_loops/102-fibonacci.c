@@ -6,14 +6,14 @@
 
 void fibonacci_numbers(void)
 {
-	int a, b, c, sum;
+	long int a, b, c, sum;
 
 	 a = 0;
 	 b = 1;
-	for (c = 1; c < 50; c++)
+	for (c = 0; c < 50; c++)
 	{
 		sum = a + b;
-		printf("%d", sum);
+		printf("%ld", sum);
 		if (c == 49)
 			break;
 		putchar(',');
