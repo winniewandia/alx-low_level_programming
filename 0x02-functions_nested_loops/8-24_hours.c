@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdbool.h>
 
 /**
  * jack_bauer - prints every minute of the day
@@ -6,18 +7,44 @@
 
 void jack_bauer(void)
 {
-	int a, b;
+	int a, b, c, d;
+	bool stop;
 
-	for (a = 0; a <= 23; a++)
+	stop = false;
+	a = 0;
+	while (a < 3)
 	{
-		for (b = 0; b <= 59; b++)
+		b = 0;
+		while (b < 9)
 		{
-			_putchar((a / 10) + '0');
-			_putchar((a % 10) + '0');
-			_putchar(':');
-			_putchar((b / 10) + '0');
-			_putchar((b % 10) + '0');
-			_putchar('\n');
+			c = 0;
+			while (c < 6)
+			{
+				d = 0;
+				while (d < 10)
+				{
+					if ((a == 2 && b == 3) && (c == 5 && d == 9))
+						stop = true;
+					_putchar(a + '0');
+					_putchar(b + '0');
+					_putchar(':');
+					_putchar(c + '0');
+					_putchar(d + '0');
+					_putchar('\n');
+					d++;
+					if (stop)
+						break;
+				}
+				c++;
+				if (stop)
+					break;
+			}
+			b++;
+			if (stop)
+				break;
 		}
+		a++;
+		if (stop)
+			break;
 	}
 }
