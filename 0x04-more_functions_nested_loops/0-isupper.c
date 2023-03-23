@@ -10,7 +10,7 @@
 
 int _isupper(int c)
 {
-	if (c >= 'A' || c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
 	}
@@ -19,16 +19,4 @@ int _isupper(int c)
 		return (0);
 	}
 }
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	char C;
 
-	C = 'A';
-	_isupper(C);
-	return (0);
-}
