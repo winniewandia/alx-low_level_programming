@@ -41,6 +41,5 @@ void rev_string(char *s)
 		start++;
 		end--;
 	}
-	_putchar('\n');
 }
 
