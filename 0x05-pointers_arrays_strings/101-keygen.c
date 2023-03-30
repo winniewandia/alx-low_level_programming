@@ -12,6 +12,9 @@
 char *generate_password(length)
 int length;
 {
+	int i;
+	char *password;
+
     /* Define valid password characters */
     char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char digits[] = "0123456789";
@@ -21,7 +24,7 @@ int length;
     srand(time(NULL));
 
     /* Allocate memory for password */
-    char *password = malloc((length + 1) * sizeof(char));
+    password = malloc((length + 1) * sizeof(char));
     if (!password)
         return NULL;
 
@@ -32,7 +35,6 @@ int length;
     password[3] = special_chars[rand() % 31];
 
     /* Fill remaining password characters with random characters */
-    int i;
     for (i = 4; i < length; i++)
     {
         int choice = rand() % 3;
