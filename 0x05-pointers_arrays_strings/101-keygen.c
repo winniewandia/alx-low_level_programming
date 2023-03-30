@@ -9,10 +9,9 @@
  *
  * Return: A pointer to the generated password, or NULL if an error occurred.
  */
-char *generate_password(int length)
+char *generate_password(length)
+int length;
 {
-	int i, j;
-	
     /* Define valid password characters */
     char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char digits[] = "0123456789";
@@ -33,6 +32,7 @@ char *generate_password(int length)
     password[3] = special_chars[rand() % 31];
 
     /* Fill remaining password characters with random characters */
+    int i;
     for (i = 4; i < length; i++)
     {
         int choice = rand() % 3;
@@ -47,7 +47,7 @@ char *generate_password(int length)
     /* Shuffle password characters */
     for (i = 0; i < length; i++)
     {
-        j = rand() % length;
+        int j = rand() % length;
         char temp = password[i];
         password[i] = password[j];
         password[j] = temp;
@@ -64,7 +64,7 @@ char *generate_password(int length)
  *
  * Return: Always 0.
  */
-int main(void)
+int main()
 {
     /* Generate and print a random password */
     char *password = generate_password(12);
