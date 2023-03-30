@@ -4,6 +4,7 @@
  * _strncpy - Copies one string to another
  * @dest: Where copied characters are to be placed
  * @src: Where characters are to be copied from
+ * @n: No of bytes to be copied
  *
  * Return: pointer to destination string
  */
