@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include <string.h>
 
-/*
+/**
  * is_alpha - Check if character is a letter
  * @c: Character to be checked
  *
@@ -11,7 +11,12 @@
 
 int is_alpha(char c)
 {
-	return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+	return (((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) &&
+		(c == ' ' || c == '\t' || c == '\n' ||
+		 c == ',' || c == ';' || c == '.' ||
+		 c == '!' || c == '?' || c == '\"' ||
+		 c == '(' || c == ')' || c == '{' ||
+		 c == '}' || !((c >= '0' && c <= '9'))));
 }
 
 /**
@@ -45,8 +50,12 @@ char *cap_string(char *str)
 		{
 			new_word = 1;
 		}
+		else
+		{
+			new_word = 0;
+		}
 		i++;
 	}
-	return str;
+	return (str);
 }
 
