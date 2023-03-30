@@ -9,30 +9,29 @@
 
 int _atoi(char *s)
 {
-	int sign, i, result, numSum;
+	int sign, i, result;
 
 	sign = 1;
 	result = 0;
 	i = 0;
-	numSum = 0;
 	while (*s == ' ')
 	{
 		s++;
 	}
-	while (*s == '-' || *s == '+')
+	if (*s == '-')
 	{
-		if (*s == '-')
-		{
-			sign *= -1;
-		}
+		sign = -1;
 		s++;
-		numSum++;
+	}
+	else if (*s == '+')
+	{
+		s++;
 	}
 	while (*s != '\0')
 	{
 		if (*s >= '0' && *s <= '9')
 		{
-			result = result * 10 - (*s - '0');
+			result = result * 10 + (*s - '0');
 			i = 1;
 			s++;
 		}
