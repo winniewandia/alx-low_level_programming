@@ -45,9 +45,6 @@ int _atoi(char *s)
 			s++;
 		}
 	}
-	if (result == 0x80000000 && sign == -1 && numSigns == 1)
-		return (result);
-
 	return (sign * result);
 }
 
