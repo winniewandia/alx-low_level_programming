@@ -22,7 +22,7 @@ int _is_prime_helper(int n, int d)
 }
 
 /**
- * _is_prime_number - Checks if number is prime
+ * is_prime_number - Checks if number is prime
  * @n: Number to be checked
  *
  * Return: Always 1 if success
