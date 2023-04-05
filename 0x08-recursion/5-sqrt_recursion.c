@@ -12,7 +12,7 @@
 int _sqr(int n, int low, int high)
 {
 	int mid, square;
-	
+
 	if (low > high)
 		return (-1);
 	mid = (low + high) / 2;
