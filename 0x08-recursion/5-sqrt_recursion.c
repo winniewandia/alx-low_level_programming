@@ -15,6 +15,8 @@ int _sqr(int n, int low, int high)
 
 	if (low > high)
 		return (-1);
+	if (low == high)
+		return (low);
 	mid = (low + high) / 2;
 	square = mid * mid;
 	if (square == n)
