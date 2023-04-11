@@ -2,7 +2,7 @@
 
 /**
  * _abs - Prints absolute value of a number
- * @num: the value to be changed to absolute
+ * @n: the value to be changed to absolute
  *
  * Return: Absolute value
  */
