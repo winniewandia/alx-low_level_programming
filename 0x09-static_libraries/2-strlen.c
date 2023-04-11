@@ -1,4 +1,10 @@
 #include "main.h"
 
-int _strlen(char *s){}
+/**
+ * _strlen - gives the length of a string
+ * @s: Input string
+ *
+ * Return: Length of the string
+ */
+int _strlen(char *s) {}
 
