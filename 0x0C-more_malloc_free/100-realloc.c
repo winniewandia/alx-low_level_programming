@@ -15,7 +15,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *result;
 	int *res, *point;
-	unsigned int i;
+	unsigned int i, min_size;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -37,7 +37,15 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	res = (int *)result;
 	point = (int *)ptr;
-	for (i = 0; i < new_size && i < old_size; i++)
+	if (new_size < old_size)
+	{
+		min_size = new_size;
+	}
+	else
+	{
+		min_size = old_size;
+	}
+	for (i = 0; i < min_size; i++)
 	{
 		res[i] = point[i];
 	}
