@@ -64,10 +64,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	new->name = malloc(_strlen(name) + 1);
 	if (new->name == NULL)
+	{
+		free(new);
 		return (NULL);
+	}
 	new->owner = malloc(_strlen(owner) + 1);
 	if (new->owner == NULL)
+	{
+		free(new);
+		free(new->name);
 		return (NULL);
+	}
 	new->age = age;
 	_strcpy(new->name, name);
 	_strcpy(new->owner, owner);
