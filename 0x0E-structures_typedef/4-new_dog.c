@@ -5,6 +5,48 @@
 #include <string.h>
 
 /**
+ * _strcpy - copies the string pointed to by src
+ * to the character array pointed to by dest
+ * @dest: Destination character array
+ * @src: Contents to be copied
+ *
+ * Return: The pointer to dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+/**
+ * _strlen - gives the length of a string
+ * @s: Input string
+ *
+ * Return: Length of the string
+ */
+
+int _strlen(char *s)
+{
+	int len;
+
+	len = 0;
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
+
+/**
  * new_dog - Creates a new dog
  * @name: Dog's name
  * @age: Dog's age
