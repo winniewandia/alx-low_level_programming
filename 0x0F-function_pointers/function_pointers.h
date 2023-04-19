@@ -2,7 +2,6 @@
 #define FUNCTION_POINTERS_H_INCLUDED
 
 int _putchar(char c);
-void print(char *n);
 void print_name(char *name, void (*f)(char *));
 
 #endif
