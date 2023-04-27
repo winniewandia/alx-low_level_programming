@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <string.h>
 #include "lists.h"
 
 /**
@@ -7,7 +9,6 @@
  *
  * Return: Address of the new element
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *temp;
@@ -29,6 +30,5 @@ list_t *add_node(list_t **head, const char *str)
 	temp->next = *head;
 	*head = temp;
 	return (*head);
-	free(temp);
 }
 
