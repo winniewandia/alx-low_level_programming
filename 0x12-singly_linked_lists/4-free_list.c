@@ -11,7 +11,7 @@ void free_list(list_t *head)
 	list_t *next, *current;
 
 	current = head;
-	while (next != NULL)
+	while (current != NULL)
 	{
 		next = current->next;
 		free(current->str);
