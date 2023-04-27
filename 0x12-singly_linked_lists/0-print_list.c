@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -6,16 +7,15 @@
  *
  * Return: The number of nodes
  */
-
 size_t print_list(const list_t *h)
 {
 	size_t n = 0;
 
 	while (h)
 	{
-		if (h->str == NULL)
+		if (!h->str)
 		{
-			printf("[%d] %s\n", 0, "nil");
+			printf("[0] (nil)\n");
 		}
 		else
 		{
