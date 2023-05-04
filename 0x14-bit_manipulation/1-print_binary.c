@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _power - returns the power of a base number
+ * _powerl - returns the power of a base number
  * @base: The base number
  * @pow: The number the base is raised to
  *
