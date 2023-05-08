@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	while (total_read < letters && (n_read = read(filename, buffer, BUFSIZ)) > 0)
+	while ((size_t)total_read < letters && (n_read = read(fd, buffer, BUFSIZ)) > 0)
 	{
 		written = write(STDOUT_FILENO, buffer, n_read);
 		if (written == -1 || written != n_read)
