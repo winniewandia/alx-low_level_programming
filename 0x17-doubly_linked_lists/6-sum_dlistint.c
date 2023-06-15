@@ -9,16 +9,16 @@
 int sum_dlistint(dlistint_t *head)
 {
 	int sum;
-	dlistint_t *nodes;
+	dlistint_t *ndes;
 
 	if (head == NULL)
 		return (0);
 	sum = 0;
-	nodes = head;
-	while (nodes != NULL)
+	ndes = head;
+	while (ndes != NULL)
 	{
-		sum += nodes->n;
-		nodes = nodes->next;
+		sum += ndes->n;
+		ndes = ndes->next;
 	}
 	return (sum);
 }
