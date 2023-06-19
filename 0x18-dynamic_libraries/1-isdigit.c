@@ -1,0 +1,11 @@
+#include "main.h"
+
+/**
+ * _isdigit - Cchecks for digit btwn 0 and 9
+ * @c: The digit to be checked
+ *
+ * Return: 1 if c is a digit
+ * and 0 otherwise
+ */
+int _isdigit(int c) {}
+
