@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strchr - Locates a character in a string
@@ -8,5 +9,18 @@
  * Return: Apointer to first occurence of
  * character, else null
  */
-char *_strchr(char *s, char c) {}
 
+char *_strchr(char *s, char c)
+{
+	while (*s != '\0')
+	{
+		if (*s == c)
+		{
+			return (s);
+		}
+		s++;
+	}
+	if (c == '\0')
+		return (s);
+	return (NULL);
+}

@@ -2,9 +2,20 @@
 
 /**
  * _abs - Prints absolute value of a number
- * @n: the value to be changed to absolute
+ * @num: the value to be changed to absolute
  *
  * Return: Absolute value
  */
-int _abs(int n) {}
 
+int _abs(int num)
+{
+	if (num < 0)
+	{
+		num = -1 * num;
+		return (num);
+	}
+	else
+	{
+		return (num);
+	}
+}
