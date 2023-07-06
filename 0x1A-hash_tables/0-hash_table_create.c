@@ -23,38 +23,3 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 	return (table);
 }
-
-/**
- * free_node - frees each node
- * @node: Node to be freed
- */
-
-void free_node(hash_node_t *node)
-{
-	free(node->key);
-	free(node->value);
-	free(node->next);
-	free(node);
-}
-
-/**
- * free_table - Function to free allocated memory to the table
- * @table: Table to be freed
- */
-
-void free_table(hash_table_t *table)
-{
-	unsigned long int i;
-	hash_node_t *item;
-
-	for (i = 0; i < table->size; i++)
-	{
-		item = table->array[i];
-		if (item)
-		{
-			free_node(item);
-		}
-	}
-	free(table->array);
-	free(table);
-}
